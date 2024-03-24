@@ -5,3 +5,4 @@
 (load (concat user-emacs-directory "org"))
 (load (concat user-emacs-directory "completion"))
 (load (concat user-emacs-directory "packages"))
+(load (concat user-emacs-directory "buffer-move"))

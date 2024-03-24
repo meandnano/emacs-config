@@ -40,7 +40,8 @@
 
     (space-keys
       "." '(find-file :wk "Find file")
-      "f c" '(find-file "~/.config/emacs/*" :wk "Edit emacs config")
+      "f c" '((lambda () (interactive) (find-file "~/.config/emacs")) :wk "Edit emacs config")
+      "f r" '(counsel-recentf :wk "Show recent files")
       "f i" '((lambda () (interactive) (find-file user-init-file)) :wk "Edit emacs config")
       "f k" '((lambda () (interactive) (find-file "~/.config/emacs/keys.el")) :wk "Edit keybinding config"))
   
@@ -71,4 +72,24 @@
       "t" '(:ignore t wk: "Toggles")
       "t l" '(display-line-numbers-mode :wk "Line numbers mode")
       "t t" '(visual-line-mode :wk "Truncate lines"))
+
+    (space-keys
+     "w" '(:ignore t :wk "Windows")
+     ;; Window splits
+     "w c" '(evil-window-delete :wk "Close window")
+     "w n" '(evil-window-new :wk "New window")
+     "w s" '(evil-window-split :wk "Horizontal split window")
+     "w v" '(evil-window-vsplit :wk "Vertical split window")
+     ;; Window motions
+     "w h" '(evil-window-left :wk "Window left")
+     "w j" '(evil-window-down :wk "Window down")
+     "w k" '(evil-window-up :wk "Window up")
+     "w l" '(evil-window-right :wk "Window right")
+     "w w" '(evil-window-next :wk "Goto next window")
+     ;; Move Windows
+     ;; (these function are defined in buffer-move.el)
+     "w H" '(buf-move-left :wk "Buffer move left")
+     "w J" '(buf-move-down :wk "Buffer move down")
+     "w K" '(buf-move-up :wk "Buffer move up")
+     "w L" '(buf-move-right :wk "Buffer move right"))
   )
