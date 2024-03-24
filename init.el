@@ -6,3 +6,4 @@
 (load (concat user-emacs-directory "completion"))
 (load (concat user-emacs-directory "packages"))
 (load (concat user-emacs-directory "buffer-move"))
+(load (concat user-emacs-directory "term"))

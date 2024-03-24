@@ -71,7 +71,8 @@
     (space-keys
       "t" '(:ignore t wk: "Toggles")
       "t l" '(display-line-numbers-mode :wk "Line numbers mode")
-      "t t" '(visual-line-mode :wk "Truncate lines"))
+      "t b" '(visual-line-mode :wk "Toggle line breaks")
+      "t t" '(vterm-toggle :wk "Toggle vterm"))
 
     (space-keys
      "w" '(:ignore t :wk "Windows")
