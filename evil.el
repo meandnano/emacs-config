@@ -14,4 +14,4 @@
       (evil-collection-init))
 
   (use-package evil-tutor)
-  (evil-set-undo-system 'undo-redo)
+  ;;(evil-set-undo-system 'undo-redo)

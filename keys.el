@@ -26,6 +26,8 @@
      "C-=" 'text-scale-increase
      "C--" 'text-scale-decrease
 
+     "M-v" 'yank ;; Paste from clipboard
+
      "M-/" 'comment-line ;; Comment line
      )
 
@@ -36,9 +38,9 @@
       :prefix "SPC" ;; set leader
       :global-prefix "M-SPC") ;; access leader in insert mode
 
-    ;; uncategorized
     (space-keys
       "." '(find-file :wk "Find file")
+      "f c" '(find-file "~/.config/emacs/*" :wk "Edit emacs config")
       "f i" '((lambda () (interactive) (find-file user-init-file)) :wk "Edit emacs config")
       "f k" '((lambda () (interactive) (find-file "~/.config/emacs/keys.el")) :wk "Edit keybinding config"))
   

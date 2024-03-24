@@ -42,3 +42,12 @@
 
  ;; Uncomment the following line if line spacing needs adjusting.
  (setq-default line-spacing 0.12)
+
+
+;; All the icons!
+(use-package all-the-icons
+  :ensure t
+  :if (display-graphic-p))
+
+(use-package all-the-icons-dired
+  :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
