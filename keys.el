@@ -72,7 +72,8 @@
       "t" '(:ignore t wk: "Toggles")
       "t l" '(display-line-numbers-mode :wk "Line numbers mode")
       "t b" '(visual-line-mode :wk "Toggle line breaks")
-      "t t" '(vterm-toggle :wk "Toggle vterm"))
+      "t t" '(vterm-toggle :wk "Toggle vterm")
+      "t r" '(rainbow-mode :wk "Toggle rainbow mode"))
 
     (space-keys
      "w" '(:ignore t :wk "Windows")

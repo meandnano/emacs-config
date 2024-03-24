@@ -8,3 +8,7 @@
     "f u" '(sudo-edit-find-file :wk "Sudo find file")
     "f U" '(sudo-edit :wk "Sudo edit file"))
  )
+
+;; Rainbow mode (shows actual colors behind hex codes)
+(use-package rainbow-mode
+  :hook org-mode prog-mode)
