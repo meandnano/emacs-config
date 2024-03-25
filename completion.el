@@ -36,6 +36,12 @@
   :diminish
   :config (counsel-mode))
 
+;; Flycheck
+(use-package flycheck
+  :ensure t
+  :defer t
+  :diminish
+  :init (global-flycheck-mode))
 
 ;; In-buffer completions
 (use-package company
