@@ -11,4 +11,12 @@
 
 ;; Rainbow mode (shows actual colors behind hex codes)
 (use-package rainbow-mode
+  :diminish
   :hook org-mode prog-mode)
+
+;; Projectile
+(use-package projectile
+  :diminish
+  :config
+  (projectile-mode 1))
+  

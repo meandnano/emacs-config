@@ -54,3 +54,8 @@
   ;;For example:
   ;;(use-package general :demand t)
   ;;(elpaca-wait)
+
+;; hides modes from the status bar
+;; add :deminish to use-package
+(use-package diminish)
+(elpaca-wait)

@@ -1,5 +1,6 @@
 ;; Enable "Which key"
   (use-package which-key
+    :diminish
     :init
       (which-key-mode 1)
     :config
@@ -13,7 +14,7 @@
 	  which-key-side-window-max-height 0.25
 	  which-key-idle-delay 0.8
 	  which-key-max-description-length 25
-	  which-key-allow-imprecise-window-fit t
+	  which-key-allow-imprecise-window-fit nil
 	  which-key-separator " → " ))
 
 ;; KEYBINDINGS!
@@ -39,6 +40,7 @@
       :global-prefix "M-SPC") ;; access leader in insert mode
 
     (space-keys
+      "SPC" '(counsel-M-x :wk "Run...")
       "." '(find-file :wk "Find file")
       "f c" '((lambda () (interactive) (find-file "~/.config/emacs")) :wk "Edit emacs config")
       "f r" '(counsel-recentf :wk "Show recent files")
@@ -71,7 +73,7 @@
     (space-keys
       "t" '(:ignore t wk: "Toggles")
       "t l" '(display-line-numbers-mode :wk "Line numbers mode")
-      "t b" '(visual-line-mode :wk "Toggle line breaks")
+      "t w" '(visual-line-mode :wk "Toggle line wrapping")
       "t t" '(vterm-toggle :wk "Toggle vterm")
       "t r" '(rainbow-mode :wk "Toggle rainbow mode"))
 

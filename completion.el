@@ -1,11 +1,8 @@
 ; emacs and in-buffer text completion
 
 ;; General-purpose completion framework (Ivy)
-(use-package counsel
-  :after ivy
-  :config (counsel-mode))
-
 (use-package ivy
+  :diminish
   :bind
   ;; ivy-resume resumes the last Ivy-based completion.
   (("C-c C-r" . ivy-resume)
@@ -33,3 +30,26 @@
   (ivy-set-display-transformer 'ivy-switch-buffer
                                'ivy-rich-switch-buffer-transformer))
 
+;; better M-x (Ivy-based)
+(use-package counsel
+  :after ivy
+  :diminish
+  :config (counsel-mode))
+
+
+;; In-buffer completions
+(use-package company
+  :defer 2
+  :diminish
+  :custom
+  (company-begin-commands '(self-insert-command))
+  (company-idle-delay .1)
+  (company-minimum-prefix-length 2)
+  (company-show-numbers t)
+  (company-tooltip-align-annotations 't)
+  (global-company-mode t))
+
+(use-package company-box
+  :after company
+  :diminish
+  :hook (company-mode . company-box-mode))
