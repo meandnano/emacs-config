@@ -26,7 +26,6 @@
     (setq ivy-rich-path-style 'abbrev)
     (ivy-rich-mode 1));; this gets us descriptions in M-x.
    
-
 ;; better M-x (Ivy-based)
 (use-package counsel
   :after ivy

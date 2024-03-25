@@ -78,6 +78,22 @@
       "t r" '(rainbow-mode :wk "Toggle rainbow mode"))
 
     (space-keys
+      "g" '(:ignore t :wk "Git")
+	"g g"  '(magit-status :wk "Status")
+	"g b"  '(magit-branch :wk "Branch")
+	"g B"  '(magit-blame :wk "Blame")
+	"g c"  '(magit-clone :wk "Clone")
+	"g i"  '(magit-init :wk "Init")
+	"g L"  '(magit-list-repositories :wk "List repos")
+	"g m"  '(magit-dispatch :wk "Dispatch")
+	"g S"  '(magit-stage-file :wk "Stage file")
+	"g U"  '(magit-unstage-file :wk "Unstags file")
+
+	"g f"  '(:ignore t :which-key "File")
+	"g f f" '(magit-find-file  :wk "Find file")
+	"g f h" '(magit-log-buffer-file :wk "Log buffer file"))
+
+    (space-keys
      "w" '(:ignore t :wk "Windows")
      ;; Window splits
      "w c" '(evil-window-delete :wk "Close window")
@@ -97,3 +113,4 @@
      "w K" '(buf-move-up :wk "Buffer move up")
      "w L" '(buf-move-right :wk "Buffer move right"))
   )
+

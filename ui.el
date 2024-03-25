@@ -4,6 +4,7 @@
 (scroll-bar-mode -1)
 
 ;; Line numbers
+(setq display-line-numbers-type 'relative)
 (global-display-line-numbers-mode 1)
 (global-visual-line-mode t)
 
@@ -51,9 +52,13 @@
 (use-package all-the-icons-dired
   :hook (dired-mode . (lambda () (all-the-icons-dired-mode t))))
 
+; Treemacs
+
+
+
 ; DASHBOARD
 (use-package dashboard
-  :ensure t 
+  :ensure t
   :init
   (setq initial-buffer-choice 'dashboard-open)
   (setq dashboard-set-heading-icons t)

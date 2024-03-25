@@ -7,3 +7,6 @@
 (load (concat user-emacs-directory "packages"))
 (load (concat user-emacs-directory "buffer-move"))
 (load (concat user-emacs-directory "term"))
+(load (concat user-emacs-directory "lang"))
+(load (concat user-emacs-directory "treemacs"))
+
