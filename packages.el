@@ -6,7 +6,6 @@
 (use-package transient :defer t)
 (use-package magit
   :defer t
-  :after (general)
   :custom
   (magit-repository-directories (list (cons elpaca-repos-directory 1)))
   (magit-diff-refine-hunk 'all)
@@ -17,6 +16,10 @@
 (use-package projectile
   :diminish
   :config
+  (setq projectile-project-search-path
+	'(("~/dev/services" . 1)
+	  ("~/dev/infra" . 1)
+	  ("~/dev/libs" . 1)))
   (projectile-mode 1))
   
 ;; Sudo edit

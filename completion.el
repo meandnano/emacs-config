@@ -55,3 +55,10 @@
   :after company
   :diminish
   :hook (company-mode . company-box-mode))
+
+;; Sort completion items
+(use-package prescient)
+(use-package company-prescient
+  :after (company prescient))
+(use-package ivy-prescient
+  :after (ivy prescient))

@@ -42,6 +42,7 @@
     (space-keys
       "SPC" '(counsel-M-x :wk "Run...")
       "." '(find-file :wk "Find file")
+      "p" '(:keymap projectile-command-map :package projectile :wk "Projectile")
       "f c" '((lambda () (interactive) (find-file "~/.config/emacs")) :wk "Edit emacs config")
       "f r" '(counsel-recentf :wk "Show recent files")
       "f i" '((lambda () (interactive) (find-file user-init-file)) :wk "Edit emacs config")
