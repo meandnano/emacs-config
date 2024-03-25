@@ -21,14 +21,11 @@
 (use-package ivy-rich
   :after ivy
   :ensure t
-  :init (ivy-rich-mode 1) ;; this gets us descriptions in M-x.
-  :custom
-  (ivy-virtual-abbreviate 'full
-   ivy-rich-switch-buffer-align-virtual-buffer t
-   ivy-rich-path-style 'abbrev)
+  ;; :custom
   :config
-  (ivy-set-display-transformer 'ivy-switch-buffer
-                               'ivy-rich-switch-buffer-transformer))
+    (setq ivy-rich-path-style 'abbrev)
+    (ivy-rich-mode 1));; this gets us descriptions in M-x.
+   
 
 ;; better M-x (Ivy-based)
 (use-package counsel
